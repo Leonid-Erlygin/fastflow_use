@@ -334,6 +334,7 @@ class MVTec(VisionDataset):
             pre_processed = self.pre_process(image=image)
             item = {"image": pre_processed["image"]}
         elif self.split in ["val", "test"]:
+            print(self.task)
             label_index = self.samples.label_index[index]
 
             item["image_path"] = image_path

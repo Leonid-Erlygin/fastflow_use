@@ -8,6 +8,8 @@ MVTec
 backup.py
 train.ipynb
 weights
+data
+cifar10_dataset
 
 # VENV
 .python-version

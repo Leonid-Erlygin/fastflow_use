@@ -10,6 +10,7 @@ matplotlib
 networkx
 nncf
 numpy
+ipywidgets
 omegaconf
 pillow
 pytorch-lightning

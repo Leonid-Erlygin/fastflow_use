@@ -8,6 +8,7 @@ lxml
 matplotlib
 networkx
 nncf
+ipywidgets
 numpy
 torch
 omegaconf

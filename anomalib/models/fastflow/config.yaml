@@ -1,10 +1,10 @@
 dataset:
   name: mvtec
   format: mvtec
-  path: /workspaces/anomalib/MVTec
+  path: /workspaces/anomalib/cifar10_dataset
   url: ftp://guest:GU.205dldo@ftp.softronics.ch/mvtec_anomaly_detection/mvtec_anomaly_detection.tar.xz
-  category: leather
-  task: segmentation
+  category: ood
+  task: classification
   label_format: None
   image_size: 256
   train_batch_size: 8
@@ -27,7 +27,7 @@ model:
   lr: 0.0001
   early_stopping:
     patience: 2
-    metric: pixel_AUROC
+    metric: image_AUROC #pixel_AUROC
     mode: max
   normalization_method: min_max # options: [null, min_max, cdf]
   threshold:
@@ -40,7 +40,7 @@ project:
   path: ./results
   log_images_to: [local]
   logger: false
-  save_to_csv: false
+  save_to_csv: true #false
 
 # PL Trainer Args. Don't add extra parameter here.
 trainer:
