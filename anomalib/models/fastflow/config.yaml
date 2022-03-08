@@ -1,7 +1,7 @@
 dataset:
   name: mvtec
   format: mvtec
-  path: ./datasets/MVTec
+  path: /workspaces/anomalib/MVTec
   url: ftp://guest:GU.205dldo@ftp.softronics.ch/mvtec_anomaly_detection/mvtec_anomaly_detection.tar.xz
   category: leather
   task: segmentation
@@ -46,7 +46,7 @@ project:
 trainer:
   accelerator: null
   accumulate_grad_batches: 1
-  amp_backend: native
+  amp_backend: apex
   amp_level: O2
   auto_lr_find: false
   auto_scale_batch_size: false
@@ -55,8 +55,8 @@ trainer:
   check_val_every_n_epoch: 1
   checkpoint_callback: true
   default_root_dir: null
-  deterministic: true
-  distributed_backend: null
+  deterministic: false
+  #distributed_backend: null
   fast_dev_run: false
   flush_logs_every_n_steps: 100
   gpus: 1
@@ -90,7 +90,7 @@ trainer:
   terminate_on_nan: false
   tpu_cores: null
   track_grad_norm: -1
-  truncated_bptt_steps: null
+  #truncated_bptt_steps: null
   val_check_interval: 1.0
   weights_save_path: null
   weights_summary: top

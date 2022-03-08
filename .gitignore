@@ -4,9 +4,10 @@ datasets
 !tests/datasets
 results
 !anomalib/core/results
-
+MVTec
 backup.py
 train.ipynb
+weights
 
 # VENV
 .python-version
