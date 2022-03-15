@@ -271,7 +271,7 @@ class FastflowLightning(AnomalyModule):
             self.manual_backward(decoder_log_prob.mean())
             opt.step()
             avg_loss += decoder_log_prob.sum()
-
+        print(avg_loss.detach().cpu().numpy()[0])
         return {"loss": avg_loss}
 
     def validation_step(self, batch, _):  # pylint: disable=arguments-differ
